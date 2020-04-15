@@ -1,0 +1,29 @@
+@import "variables";
+
+a{
+    color: $accent-color;
+
+    &:visited{
+        color: $dark-color;
+    }
+}
+
+@mixin standard-button{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: $off-white;
+    background-color: $accent-color;
+    border: 2px solid $accent-color;
+    cursor: pointer;
+
+    &:hover{
+        background-color: transparent;
+        color: $accent-color;
+    }
+}
+
+
+button{
+    @include standard-button;
+}
