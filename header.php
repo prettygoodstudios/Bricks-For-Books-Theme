@@ -24,30 +24,17 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
-
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$_s_description = get_bloginfo( 'description', 'display' );
-			if ( $_s_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $_s_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			<?php the_custom_logo(); ?>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding -->
-
+		<div class="menu-toggle open" aria-controls="primary-menu" aria-expanded="false">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -58,5 +45,47 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<script>
+		const toggle = document.querySelector(".menu-toggle");
+		const menu = document.querySelector("#site-navigation");
+
+		let menuOpen = false;
+
+		const hideMenu = () => {
+			menu.style.display = "none";
+			toggle.style.display = "block";
+			toggle.className = "menu-toggle open";
+		}
+
+		const showMenu = () => {
+			menu.style.display = "block";
+			toggle.style.display = "block";
+			toggle.className = "menu-toggle close";
+		}
+
+		const clearStyling = () => {
+			menu.style.display = "";
+			toggle.style.display = "";
+			toggle.className = "menu-toggle open";
+		}
+
+		toggle.addEventListener("click", (e) => {
+			if(menuOpen){
+				hideMenu();
+			}else{
+				showMenu();
+			}
+			menuOpen = !menuOpen;
+		});
+
+		window.addEventListener("resize", (e) => {
+			if(window.innerWidth > 900){
+				clearStyling();
+				menuOpen = false;
+			}
+		});
+
+	</script>
 
 	<div id="content" class="site-content">

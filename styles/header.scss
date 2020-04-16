@@ -1,0 +1,113 @@
+@import "variables";
+
+.site-header{
+    display: flex;
+    flex-direction: row;
+    background-color: $off-white;
+    color: $accent-color;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 50;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    flex-wrap: wrap;
+
+    .site-branding{
+        a{
+            text-decoration: none;
+        }
+
+        h1{
+            font-size: 2em;
+            color: $accent-color !important;
+            padding: 0px 20px;
+        }
+
+    }
+
+    .main-navigation{
+        li{
+            list-style: none;
+            display: inline-block;
+            padding: 20px;
+            a{
+                text-decoration: none;
+                &:hover{
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    @media only screen and (max-width: 900px){
+        .main-navigation{
+            display: none;
+
+            ul{
+                width: 100vw;
+            }
+
+            li{
+                display: block;
+            }
+        }
+        .menu-toggle{
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+
+            div{
+                position: absolute;
+                width: 50px;
+                height: 5px;
+                border-radius: 2px;
+                opacity: 100;
+                background-color: $accent-color;
+                transition: 1s opacity, 1s top, 1s left;
+            }
+
+            
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .open{
+            div:nth-child(2){
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+
+            div:nth-child(3){
+                top: 45px;
+            }
+        }
+
+        .close{
+
+            div:nth-child(1){
+                top: 50%;
+                transform: translate(0, -50%) rotate(-45deg);
+            }
+
+            div:nth-child(2){
+                top: 50%;
+                transform: translate(0, -50%);
+                opacity: 0;
+            }
+
+            div:nth-child(3){
+                top: 50%;
+                transform: translate(0, -50%) rotate(45deg);
+            }
+        }
+    }
+}
