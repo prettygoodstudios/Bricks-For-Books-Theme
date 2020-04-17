@@ -2,10 +2,11 @@ $accent-color: #9D0C2E;
 $dark-color: #31322E;
 $off-white: #ECECEC;
 $font: 'Montserrat', sans-serif;
+$transparent-white: rgba(255, 255, 255, 0.5);
 
 html, body{
     font-family: $font;
-    margin: 100px 0px;
+    margin: 0px;
     padding: 0;
 }
 
