@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header" style="top: <?php echo is_admin_bar_showing() ? 32 : 0 ?>px;">
 		<div class="site-branding">
 			<?php the_custom_logo(); ?>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
