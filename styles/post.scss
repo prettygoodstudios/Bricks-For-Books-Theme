@@ -1,4 +1,52 @@
 @import "variables.scss";
+@import "widgets";
 .post{
-    background-color: $accent-color;
+    background-color: $off-white;
+    padding: 20px;
+    width: 600px;
+    margin: 100px auto;
+
+    .post-header{
+        
+        .image-holder{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img{
+                min-width: 100%;
+                min-height: 500px;
+                width: auto !important;
+                height: auto !important;
+            }
+        }
+    }
+
+    .entry-footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        a{
+            font-size: 0.8em;
+            text-decoration: none;
+            margin: 0px 10px;
+            
+        }
+    }
+
+    .read-more{
+        @include standard-button;
+        text-decoration: none;
+        display: inline-block;
+        margin: 30px auto 30px 50%;
+        transform: translate(-50%, 0);
+        min-width: 200px;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 700px) {
+        width: calc(100% - 80px);
+    }
 }
