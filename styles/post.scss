@@ -50,3 +50,72 @@
         width: calc(100% - 80px);
     }
 }
+
+.comments-area{
+    margin: 0px auto 100px auto;
+    width: 600px;
+    background-color: $off-white;
+    padding: 20px;
+
+
+    .comment-list{
+        list-style: none;
+        padding: 0;
+        .comment-body{
+            background-color: $dark-color;
+            color: $off-white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0px;
+
+            .comment-author{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+
+                img{
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 10px;
+                }
+            }
+
+            .says{
+                display: none;
+            }
+
+            .comment-reply-link{
+                @include light-button;
+                text-decoration: none;
+                font-size: 0.8em;
+            }
+
+            a{
+                color: $off-white;
+                text-decoration: none;
+
+                &:hover{
+                    cursor: pointer;
+                    color: $accent-color;
+                }
+            }
+        }
+
+        .children{
+            list-style: none;
+        }
+    }
+
+    .comment-form-comment{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submit{
+        @include standard-button;
+    }
+
+    @media only screen and (max-width: 700px) {
+        width: calc(100% - 80px);
+    }
+}

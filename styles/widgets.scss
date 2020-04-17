@@ -8,19 +8,27 @@ a{
     }
 }
 
-@mixin standard-button{
+@mixin button-generator($background, $text){
     border-radius: 30px;
     padding: 10px 20px;
     font-size: 1.5em;
-    color: $off-white;
-    background-color: $accent-color;
-    border: 2px solid $accent-color;
+    color: $text;
+    background-color: $background;
+    border: 2px solid $background;
     cursor: pointer;
 
     &:hover{
         background-color: transparent;
-        color: $accent-color;
+        color: $background;
     }
+}
+
+@mixin standard-button{
+    @include button-generator($accent-color, $off-white);
+}
+
+@mixin light-button{
+    @include button-generator($off-white, $dark-color);
 }
 
 
