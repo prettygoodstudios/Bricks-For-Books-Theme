@@ -49,15 +49,8 @@
 			if (!is_singular()) :
 				echo '<a class="read-more" href="' . esc_url( get_permalink() ) . '" rel="bookmark">Read More!</a>' ;
 			endif;
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-					'after'  => '</div>',
-				)
-			);
 		?>
 	</div><!-- .entry-content -->
-
 	<footer class="entry-footer">
 		<?php _s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
