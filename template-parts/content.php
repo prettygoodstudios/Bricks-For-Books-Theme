@@ -22,44 +22,39 @@
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					<?php
+				 	<?php
 					_s_posted_on();
 					_s_posted_by();
 					?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</div>
-		<div class="image-holder">
-			<?php _s_post_thumbnail(); ?>
-		</div>
+		<?php
+		if (has_post_thumbnail()) :
+			echo '<div class="image-holder">';
+			_s_post_thumbnail();
+			echo '</div>';
+		endif;
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', '_s' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+			$content = get_the_content();
+			$content = apply_filters( 'the_content', $content );
+			$content = str_replace( ']]>', ']]&gt;', $content );
+			$content = !is_singular() ? wp_trim_words($content, $num_words = 20) : $content;
+			echo $content;
 
-		if (!is_singular()) :
-			echo '<a class="read-more" href="' . esc_url( get_permalink() ) . '" rel="bookmark">Read More!</a>' ;
-		endif;
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-				'after'  => '</div>',
-			)
-		);
+			if (!is_singular()) :
+				echo '<a class="read-more" href="' . esc_url( get_permalink() ) . '" rel="bookmark">Read More!</a>' ;
+			endif;
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+					'after'  => '</div>',
+				)
+			);
 		?>
 	</div><!-- .entry-content -->
 
