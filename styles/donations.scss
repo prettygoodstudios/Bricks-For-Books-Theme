@@ -59,4 +59,22 @@
             margin: 20px auto;
         }
     }
+    @media only screen and (max-width: 700px) {
+        width: calc(100% - 80px);
+    }
+}
+
+
+#give_donation_receipt{
+    color: $dark-color;
+    width: 100%;
+    thead{
+        background-color: $accent-color;
+        color: $off-white;
+    }
+    tbody{
+        tr:nth-child(2n+1){
+            background-color: $off-white;
+        }
+    }
 }
