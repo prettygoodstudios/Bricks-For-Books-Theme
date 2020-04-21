@@ -17,6 +17,15 @@
         padding: 0;
     }
 
+    #give-gateway-radio-list{
+        list-style: none;
+    }
+
+    #give-amount{
+        @include standard-input;
+        width: auto;
+    }
+
     .give-donation-levels-wrap{
         display: flex;
         flex-wrap: wrap;
