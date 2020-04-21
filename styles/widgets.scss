@@ -35,3 +35,12 @@ a{
 button{
     @include standard-button;
 }
+
+@mixin standard-input{
+    border-radius: 5px;
+    padding: 10px;
+    color: $dark-color;
+    background-color: white;
+    border: none;
+    width: calc(100% - 20px);
+}

@@ -1,0 +1,53 @@
+@import "variables";
+@import "widgets";
+
+.give-sidebar{
+    display: none;
+}
+
+.give_forms{
+    width: 600px;
+    margin: 100px auto;
+    background-color: $off-white;
+    padding: 20px;
+    border-radius: 10px;
+
+    fieldset{
+        border: none;
+        padding: 0;
+    }
+
+    .give-donation-levels-wrap{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+    
+        button{
+            background-color: white;
+            color: $dark-color;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    }
+
+    #give_checkout_user_info{
+        label{
+            display: none;
+        }
+        input{
+            @include standard-input;
+        }
+    }
+    .give-submit-button-wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .give-submit{
+            @include standard-button;
+            margin: 20px auto;
+        }
+    }
+}
