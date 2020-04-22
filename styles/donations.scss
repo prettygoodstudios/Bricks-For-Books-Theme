@@ -4,67 +4,102 @@
 .give-sidebar{
     display: none;
 }
+.site-donations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 200px 0px;
+    .give_forms{
+        align-self: flex-start;
+        width: 600px;
+        background-color: $off-white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 0px;
 
-.give_forms{
-    width: 600px;
-    margin: 100px auto;
-    background-color: $off-white;
-    padding: 20px;
-    border-radius: 10px;
-
-    fieldset{
-        border: none;
-        padding: 0;
-    }
-
-    #give-gateway-radio-list{
-        list-style: none;
-    }
-
-    #give-amount{
-        @include standard-input;
-        width: auto;
-    }
-
-    .give-donation-levels-wrap{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        list-style: none;
-        padding: 0;
-    
-        button{
-            background-color: white;
-            color: $dark-color;
+        fieldset{
             border: none;
-            border-radius: 5px;
-            margin: 5px;
+            padding: 0;
+        }
+
+        #give-gateway-radio-list{
+            list-style: none;
+        }
+
+        #give-amount{
+            @include standard-input;
+            width: auto;
+        }
+
+        .give-donation-levels-wrap{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+        
+            button{
+                background-color: white;
+                color: $dark-color;
+                border: none;
+                border-radius: 5px;
+                margin: 5px;
+            }
+        }
+
+        #give_checkout_user_info{
+            label{
+                display: none;
+            }
+            input{
+                @include standard-input;
+            }
+        }
+        .give-submit-button-wrap{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .give-submit{
+                @include standard-button;
+                margin: 20px auto;
+            }
+        }
+        @media only screen and (max-width: 700px) {
+            width: calc(100% - 80px);
         }
     }
 
-    #give_checkout_user_info{
-        label{
-            display: none;
-        }
-        input{
-            @include standard-input;
-        }
-    }
-    .give-submit-button-wrap{
+    .frm_submit{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        .give-submit{
+        .frm_button_submit{
             @include standard-button;
-            margin: 20px auto;
         }
     }
-    @media only screen and (max-width: 700px) {
-        width: calc(100% - 80px);
+
+    .frm_form_field{
+        input, select{
+            @include standard-input;
+            margin: 10px 0px;
+        }
+
+        select{
+            width: 100%;
+        }
+        label{
+            font-size: 0.5em;
+        }
+    }
+
+    .frm_description{
+        font-size: 0.9em;
+    }
+
+    .frm_required{
+        display: none;
     }
 }
-
-
 #give_donation_receipt{
     color: $dark-color;
     width: 100%;
