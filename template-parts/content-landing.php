@@ -13,7 +13,9 @@
 	<header class="entry-header">
 		<?php _s_post_thumbnail(); ?>
 		<div class="title-group">  
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('call-to-action') ) : 
+	
+			endif; ?>
 		</div>
 	</header><!-- .entry-header -->
 

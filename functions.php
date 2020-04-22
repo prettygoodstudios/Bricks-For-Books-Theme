@@ -125,9 +125,23 @@ add_action( 'after_setup_theme', '_s_content_width', 0 );
 function _s_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', '_s' ),
+			'name'          => esc_html__( 'Sidebar', 'Bricks For Books' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', '_s' ),
+			'description'   => esc_html__( 'Add widgets here.', 'Bricks For Books' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="action-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+
+function landing_title_widget_init(){
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Call To Action', 'Bricks For Books' ),
+			'id'            => 'call-to-action',
+			'description'   => esc_html__( 'What appears on the landing page call to action area.', 'Bricks For Books' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -136,6 +150,7 @@ function _s_widgets_init() {
 	);
 }
 add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'landing_title_widget_init');
 
 /**
  * Enqueue scripts and styles.
