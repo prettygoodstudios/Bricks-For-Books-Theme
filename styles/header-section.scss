@@ -55,8 +55,14 @@
     }
 
     @media only screen and (max-width: 400px){
+        height: 600px;
         .title-group{
+            top: calc(50% + 20px);
             left: 20px;
+            max-width: calc(100vw - 80px);
+        }
+        img{
+            min-height: 600px;
         }
     }
 }
