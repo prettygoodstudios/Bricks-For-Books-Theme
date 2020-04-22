@@ -14,8 +14,17 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+		<link rel="stylesheet" href="/styles/footer.css">
+		<hr>
+		<div class="footer">
+			<br>
+			<p class="logo">  BRICKS FOR BOOKS <br> </p>
+			<p class="about">(800)222-5555  <br> info@bricksforbooks.com <br> Copyright Bricks For Books 2020</p>
+			<br>
+			<br>
+			<p class="gone">placeholder</p>
 		</div><!-- .site-info -->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
