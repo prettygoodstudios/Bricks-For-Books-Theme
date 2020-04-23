@@ -39,6 +39,12 @@ button{
 .standard-button-link{
     @include standard-button;
     text-decoration: none;
+    &:visited{
+        color: $off-white;
+        &:hover{
+            color: $accent-color;
+        }
+    }
 }
 
 @mixin standard-input{
