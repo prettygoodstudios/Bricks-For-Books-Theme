@@ -1,9 +1,11 @@
+@import "variables";
+
 .footer{
   width: 100%;
-  font-family: 'Lucida Console', Monaco, monospace;
+  font-family: $font;
 
 	border-style: none;
-  background-color: gray;
+  background-color: $off-white;
   opacity: 0.8;
 }
 hr {
