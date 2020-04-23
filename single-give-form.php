@@ -13,6 +13,9 @@ get_header();
 	<div id="primary" class="content-area">
 		<header class="entry-header">
 			<?php _s_post_thumbnail(); ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('donation-header-image') ) : 
+	
+			endif; ?>
 			<div class="title-group">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</div>
