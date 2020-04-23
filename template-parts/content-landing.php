@@ -21,16 +21,14 @@
 
 	
 
-	<div class="entry-content">
+	<div class="landing-content">
 		<?php
+		echo "<div class='landing-content__left-side'>";
 		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
-				'after'  => '</div>',
-			)
-		);
+		echo "</div>";
+		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('landing-right-well') ) : 
+	
+		endif;
 		?>
 	</div><!-- .entry-content -->
 

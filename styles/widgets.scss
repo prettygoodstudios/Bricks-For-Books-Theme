@@ -36,6 +36,11 @@ button{
     @include standard-button;
 }
 
+.standard-button-link{
+    @include standard-button;
+    text-decoration: none;
+}
+
 @mixin standard-input{
     border-radius: 5px;
     padding: 10px;

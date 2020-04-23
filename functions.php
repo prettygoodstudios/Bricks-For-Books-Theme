@@ -144,13 +144,28 @@ function landing_title_widget_init(){
 			'description'   => esc_html__( 'What appears on the landing page call to action area.', 'Bricks For Books' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<center><h2 class="action-title">',
+			'after_title'   => '</h2></center>',
+		)
+	);
+}
+
+function landing_right_widget_init(){
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Widget Area For Right Side of Landing Page', 'Bricks For Books' ),
+			'id'            => 'landing-right-well',
+			'description'   => esc_html__( 'What appears on the right side of the landing page.', 'Bricks For Books' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s landing-right-well">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
 		)
 	);
 }
 add_action( 'widgets_init', '_s_widgets_init' );
 add_action( 'widgets_init', 'landing_title_widget_init');
+add_action( 'widgets_init', 'landing_right_widget_init');
 
 /**
  * Enqueue scripts and styles.
