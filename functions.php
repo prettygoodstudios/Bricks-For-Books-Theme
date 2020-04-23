@@ -163,9 +163,24 @@ function landing_right_widget_init(){
 		)
 	);
 }
+
+function donation_page_header_widget_init(){
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header image for donation page', 'Bricks For Books' ),
+			'id'            => 'donation-header-image',
+			'description'   => esc_html__( 'Header image for donation page.', 'Bricks For Books' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+}
 add_action( 'widgets_init', '_s_widgets_init' );
 add_action( 'widgets_init', 'landing_title_widget_init');
 add_action( 'widgets_init', 'landing_right_widget_init');
+add_action( 'widgets_init', 'donation_page_header_widget_init');
 
 /**
  * Enqueue scripts and styles.
