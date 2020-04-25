@@ -10,8 +10,11 @@
         justify-content: center;
         align-items: center;
         img{
-            max-width: 500px;
+            max-width: 500px !important;
             max-height: 800px;
+            @media only scren and(max-width: 1200px){
+                max-width: calc(100% - 80px) !important;
+            }
         }
     }
 
