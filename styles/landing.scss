@@ -5,22 +5,26 @@
     justify-content: space-evenly;
     margin: 40px 0px;
     .landing-right-well{
+        flex-grow: 1;
         width: calc(50vw - 50px);
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 20px;
         img{
             max-width: 300px !important;
             max-height: 800px;
             @media only screen and(max-width: 1200px){
-                max-width: calc(100vw - 80px) !important;
+                max-width: calc(100% - 80px) !important;
             }
         }
     }
 
     &__left-side{
+        flex-grow: 1;
         width: calc(50vw - 200px);
         min-width: 300px;
+        padding: 20px;
         h1{
             text-align: center;
             width: 100%;
