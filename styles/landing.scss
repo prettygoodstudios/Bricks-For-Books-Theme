@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-top: 40px;
+    margin: 40px 0px;
     .landing-right-well{
         width: calc(50vw - 50px);
         display: flex;
@@ -12,7 +12,7 @@
         img{
             max-width: 500px !important;
             max-height: 800px;
-            @media only scren and(max-width: 1200px){
+            @media only screen and(max-width: 1200px){
                 max-width: calc(100% - 80px) !important;
             }
         }
