@@ -5,3 +5,5 @@ composer.lock
 *.css
 !style.css
 *.log
+.DS_Store
+*.DS_Store
