@@ -17,11 +17,15 @@
 		</div>
 	</header><!-- .entry-header -->
 
-	
 
-	<div class="entry-content">
+
+	<div class="entry-content left ">
 		<?php
+		echo "<div class='contact'";
+
 		the_content();
+
+		echo "</div>";
 
 		wp_link_pages(
 			array(
