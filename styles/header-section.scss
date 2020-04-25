@@ -21,6 +21,14 @@
         padding: 20px;
         font-size: 2em;
         max-width: 50vw;
+        @media only screen and(max-width: 600px){
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            h2{
+                font-size: 1.2em;
+            }
+            max-width: calc(100% - 80px);
+        }
 
         h1{
             margin: 20px 0px;
@@ -59,8 +67,6 @@
         height: 600px;
         .title-group{
             top: calc(50% + 20px);
-            left: 20px;
-            max-width: calc(100vw - 80px);
         }
         img{
             min-height: 600px;

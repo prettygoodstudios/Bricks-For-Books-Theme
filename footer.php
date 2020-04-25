@@ -17,12 +17,8 @@
 		<link rel="stylesheet" href="/styles/footer.css">
 		<hr>
 		<div class="footer">
-			<br>
-			<p class="logo">  BRICKS FOR BOOKS <br> </p>
+			<p class="logo">BRICKS FOR BOOKS</p>
 			<p class="about">(801) 380-6420  <br> brickz4bookz@gmail.com <br> Copyright Bricks For Books 2020</p>
-			<br>
-			<br>
-			<p class="gone">placeholder</p>
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->
