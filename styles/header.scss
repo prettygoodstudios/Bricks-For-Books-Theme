@@ -51,6 +51,7 @@
             display: inline-block;
             padding: 20px;
             a{
+                color: $dark-color;
                 text-decoration: none;
                 &:hover{
                     color: $accent-color;

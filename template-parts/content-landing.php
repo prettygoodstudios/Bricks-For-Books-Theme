@@ -24,6 +24,7 @@
 	<div class="landing-content">
 		<?php
 		echo "<div class='landing-content__left-side'>";
+		the_title( '<h1 class="entry-title">', '</h1>' );
 		the_content();
 		echo "</div>";
 		if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('landing-right-well') ) : 

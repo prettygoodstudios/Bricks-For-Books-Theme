@@ -17,5 +17,9 @@
     &__left-side{
         width: calc(50vw - 200px);
         min-width: 300px;
+        h1{
+            text-align: center;
+            width: 100%;
+        }
     }
 }
