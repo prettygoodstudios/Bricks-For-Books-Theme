@@ -3,12 +3,19 @@
   font-family: $font;
   background-color: $off-white;
   text-align: left;
-  width: 40vw;
   padding: 10px;
   border-radius: 5px;
   font-size: 20px;
+
 }
 .left{
   float: left;
-  padding-left: 10px;
+  padding: 30px;
+
+}
+.right{
+  float: right;
+  padding-top: 30px;
+  margin-right: 75px;
+
 }
