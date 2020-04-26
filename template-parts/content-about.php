@@ -17,9 +17,9 @@
 		</div>
 	</header><!-- .entry-header -->
 
-	
 
-	<div class="entry-content">
+
+	<div class="entry-content aboutPage">
 		<?php
 		the_content();
 
