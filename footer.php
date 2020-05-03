@@ -17,7 +17,13 @@
 		<link rel="stylesheet" href="/styles/footer.css">
 		<hr>
 		<div class="footer">
-			<p class="logo">BRICKS FOR BOOKS</p>
+			<div class="logo">
+			<?php
+				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-image') ) : 
+						
+				endif;
+			?>
+			</div>
 			<p class="about">(801) 380-6420  <br> brickz4bookz@gmail.com <br> Copyright Bricks For Books 2020</p>
 		</div><!-- .site-info -->
 
