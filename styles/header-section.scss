@@ -21,7 +21,7 @@
         padding: 20px;
         font-size: 2em;
         max-width: 50vw;
-        @media only screen and(max-width: 600px){
+        @media only screen and(max-width: 700px){
             left: 50%; 
             transform: translate(-50%, -50%);
             h2{
@@ -57,11 +57,13 @@
     }
 
     img{
-        max-width: unset !important;
         min-width: 100vw;
         min-height: 500px;
         width: auto !important;
         height: auto !important;
+        @media only screen and (max-width: 700px){
+            max-width: 300vw !important;
+        }
     }
 
     @media only screen and (max-width: 400px){
