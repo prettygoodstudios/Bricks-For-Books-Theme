@@ -57,6 +57,10 @@
             }
         }
 
+        .frm_error{
+            @include standard-error;
+        }
+
         textarea{
             @include standard-input;
             margin: 10px 0px;

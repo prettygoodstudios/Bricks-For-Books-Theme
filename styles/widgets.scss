@@ -55,3 +55,12 @@ button{
     border: none;
     width: calc(100% - 20px);
 }
+
+@mixin standard-error{
+    background-color: $accent-color;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    border-radius: 20px;
+    color: #eceece;
+    display: inline-block;
+}
