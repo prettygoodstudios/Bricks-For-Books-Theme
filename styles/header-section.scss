@@ -28,6 +28,7 @@
         @media only screen and(max-width: 700px){
             left: 50%; 
             transform: translate(-50%, -50%);
+            height: 600px;
             h2{
                 font-size: 1.2em;
             }
@@ -71,7 +72,6 @@
     }
 
     @media only screen and (max-width: 400px){
-        height: 600px;
         .title-group{
             top: calc(50% + 20px);
             width: 100%;
