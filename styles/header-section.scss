@@ -72,6 +72,9 @@
 
     @media only screen and (max-width: 700px){
         height: 600px;
+        img{
+            min-height: 600px;
+        }
     }
 
     @media only screen and (max-width: 400px){
