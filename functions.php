@@ -192,11 +192,41 @@ function footer_widget_init(){
 	);
 }
 
+function mission_widget_init(){
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Mission statement.', 'Bricks For Books' ),
+			'id'            => 'mission-statement',
+			'description'   => esc_html__( 'Mision statement on about page.', 'Bricks For Books' ),
+			'before_widget' => '<section id="%1$s" class="widget mission__message %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+}
+
+function mission_icon_widget_init(){
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Mission statement image.', 'Bricks For Books' ),
+			'id'            => 'mission-icon',
+			'description'   => esc_html__( 'Mision statement image.', 'Bricks For Books' ),
+			'before_widget' => '<section id="%1$s" class="widget mission__icon %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
+}
+
 add_action( 'widgets_init', '_s_widgets_init' );
 add_action( 'widgets_init', 'landing_title_widget_init');
 add_action( 'widgets_init', 'landing_right_widget_init');
 add_action( 'widgets_init', 'donation_page_header_widget_init');
 add_action( 'widgets_init', 'footer_widget_init');
+add_action( 'widgets_init', 'mission_widget_init');
+add_action( 'widgets_init', 'mission_icon_widget_init');
 
 /**
  * Enqueue scripts and styles.

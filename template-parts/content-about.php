@@ -30,6 +30,21 @@
 			)
 		);
 		?>
+		<h1 class="mission-title">Mission</h1>
+		<div class="mission">
+			<div class="mission__icon-wrapper">
+				<?php
+					if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mission-icon') ) : 
+							
+					endif;
+				?>
+			</div>
+			<?php
+				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('mission-statement') ) : 
+						
+				endif;
+			?>
+		</div>
 		<h1 class="team-title">Team</h1>
 		<div class="team">
 			<div class="team__member">
