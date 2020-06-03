@@ -19,6 +19,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
+            img{
+                max-width: 220px;
+            }
         }
         &__name{
             font-size: 1.5em;
